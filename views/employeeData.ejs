@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> All Data</title>
+    <style>
+        .image-logout{
+            display: flex;
+            justify-content: space-between;
+            margin-top:3%;
+        }
+        .container{
+            width: 50%;
+            margin: 0 auto;
+        }
+        .logout-btn{
+            margin-top: 13%;
+        }
+        .user-content{
+            text-align: center;
+            margin-top: 7%;
+        }
+
+    </style>
+</head>
+<body>
+    
+        <div class="container">
+            <div class="image-logout">
+                <div>
+                    <img class="rounded-circle" src="<%= imgSrc %>" alt="" width="304" height="236">
+                </div>
+                <div class="logout-btn">
+                    <a class="btn btn-danger" href="./login">Logout</a>
+                </div>
+        
+        </div>
+
+         <div class="user-content">
+            <h1>Welcome  <%= firstname %> <%= lastname %> </h1>
+         </div>
+         <div class="user-content">
+            <h1>Your email id:  <%=  email  %></h1>
+         </div> 
+     
+      
+    </div>
+    
+</body>
+</html>

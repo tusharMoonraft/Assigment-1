@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teaser Data</title>
+    <link href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css" rel="stylesheet">
+    <link href="https://unpkg.com/filepond/dist/filepond.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ==" crossorigin="anonymous" />
+    <!-- add before </body> -->
+    
+    <script src="https://unpkg.com/filepond-plugin-file-encode/dist/filepond-plugin-file-encode.js"></script>
+    <script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"></script>
+    <script src="https://unpkg.com/filepond-plugin-image-resize/dist/filepond-plugin-image-resize.js"></script>
+    
+    <script src="https://unpkg.com/filepond/dist/filepond.js"></script>
+    <style>
+        .flex{
+            display:flex;
+            
+        }
+        .flex span{
+            font-size: 40px; 
+            line-height: 41px; 
+            border: 1px solid black; 
+        }
+    </style>
+</head>
+<body>
+    <form action="/teaseradd" class="ui form" method="POST">
+        <div class="field">
+          <label>Teaser Text</label>
+          <input type="text" name="teasertext" placeholder="Teaser Text">
+        </div>
+        <div class="field">
+            <label>Teaser Description</label>
+            <textarea  name="teaserdescription"  rows="4" cols="50">
+            </textarea>
+          <!-- <input type="text" name="teaserdescription" placeholder="LTeaser Description"> -->
+        </div>
+        
+        
+        <div class="field">
+            <label for="img">Image</label>
+            <div class="flex">
+                <input type="file" name="img" class="filepond ui image small" >
+                <span>+</span>
+            </div>
+            
+        </div>
+        
+        
+        <button class="ui button primary" type="submit">Submit</button>
+      </form>
+</body>
+</html>
